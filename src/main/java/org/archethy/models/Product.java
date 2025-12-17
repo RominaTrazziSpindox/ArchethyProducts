@@ -1,4 +1,5 @@
-package models;
+package org.archethy.models;
+
 
 import java.util.List;
 import java.util.Objects;

@@ -1,4 +1,5 @@
-package models;
+package org.archethy.models;
+
 
 public class Category {
 
