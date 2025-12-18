@@ -30,8 +30,17 @@ public class ProductService {
         return product.orElse(null);
     }
 
+    public Product addProduct(Product product) {
+        product.setIdProduct(productsList.size() + 1);
+        productsList.add(product);
+        return product;
+    }
+}
 
-    /* Ciclo for, in alternativa:
+
+
+
+/* Ciclo for, in alternativa:
 
     for (int i = 0; i < productsList.size(); i++) {
 
@@ -59,11 +68,7 @@ public class ProductService {
          */
 
 
-    public Product addProduct(Product product) {
-        product.setIdProduct(productsList.size() + 1);
-        productsList.add(product);
-        return product;
-    }
-}
+
+
 
 

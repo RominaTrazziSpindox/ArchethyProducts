@@ -1,6 +1,7 @@
 package org.archethy.controllers;
 
 import org.archethy.services.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,14 +18,9 @@ import java.util.List;
 
 public class ProductController {
 
-    // Crea una costante che contiene un'istanza della classe ProductService
-    private final ProductService productService;
-
-    /* Costruttore della classe ProductController
-    Spring passa un'istanza di ProductService già pronta (dal Bean Container) */
-    public ProductController(ProductService productService) {
-        this.productService = productService;
-    }
+    // Inietta direttamente una istanza di ProductService quando viene invocato
+    @Autowired
+    private ProductService productService;
 
     // Endpoint che restituisce una lista di prodotti chiamando un metodo dal service
     @GetMapping("/list")
