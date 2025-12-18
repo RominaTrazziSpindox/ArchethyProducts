@@ -27,6 +27,7 @@ dependencies {
 
     // 💾 Spring Data JPA — per interagire con database (via Hibernate)
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
 
     // 🧠 Lombok — per generare automaticamente getter/setter, costruttori, ecc.
     compileOnly("org.projectlombok:lombok")
