@@ -1,10 +1,14 @@
 package org.archethy.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 import java.util.Objects;
 
+@Setter
+@Getter
 public class Product {
-
 
     // Proprietà
     private int idProduct;
@@ -22,39 +26,6 @@ public class Product {
         this.idProduct = idProduct;
         this.name = name;
         this.categories = categories;
-        this.price = price;
-    }
-
-    // Getters and setters
-    public int getIdProduct() {
-        return idProduct;
-    }
-
-    public void setIdProduct(int idProduct) {
-        this.idProduct = idProduct;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public List<Category> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Float getPrice() {
-        return price;
-    }
-
-    public void setPrice(Float price) {
         this.price = price;
     }
 
